@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Films } from './models/film.mock';
 import { Film } from './models/film.model';
 
 @Component({
@@ -24,6 +25,26 @@ export class AppComponent {
 
   filter(): void {
     this.filmler = this.filmler.filter((x) => !x.izlendiMi);
-    console.log('tiklandi');
+    console.log('tiklandi filter');
+  }
+
+  tumFilmleriGoster: boolean = true;
+
+  filterToggle(): void {
+    this.tumFilmleriGoster = !this.tumFilmleriGoster;
+
+    !this.tumFilmleriGoster
+      ? (this.filmler = this.filmler.filter((f) => f.izlendiMi))
+      : (this.filmler = Films);
+    console.log('tiklandi filterToggle');
+  }
+
+  getButtonText(): string {
+    if (this.tumFilmleriGoster) return 'İzlenmeyenler';
+    else return 'Hepsi';
+  }
+
+  ekleFilm(filmAdi: string): void {
+    this.filmler.push(new Film(filmAdi));
   }
 }

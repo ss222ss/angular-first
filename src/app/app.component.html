@@ -4,6 +4,7 @@
   Start editing to see some magic happen :)
 </p>
 -->
+<app-header-menu></app-header-menu>
 
 <u>inner html</u>
 <br /><br />
@@ -109,6 +110,10 @@
   Sadece İzlenmeyenleri Göster
 </button>
 
+<button class="btn btn-success" (click)="filterToggle()">
+  {{ getButtonText() }}
+</button>
+
 <div *ngFor="let film of filmler">
   <div>
     <input
@@ -131,6 +136,14 @@
 <hr />
 
 <p><a href="https://getbootstrap.com/"> getbootstrap.com/</a></p>
+
+<hr />
+<div>
+  <input type="text" #filmAdiGirilen name="" id="" placeholder="Film Adı" />
+  <button class="btn btn-danger" (click)="ekleFilm(filmAdiGirilen.value)">
+    Ekle
+  </button>
+</div>
 
 <br />
 <br />
