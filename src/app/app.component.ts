@@ -21,4 +21,9 @@ export class AppComponent {
     new Film('Dont Look Up', '', true),
     new Film('Yüzüklerin Efendisi', '', true),
   ];
+
+  filter(): void {
+    this.filmler = this.filmler.filter((x) => !x.izlendiMi);
+    console.log('tiklandi');
+  }
 }

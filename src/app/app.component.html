@@ -67,6 +67,12 @@
 </ul>
 
 <hr />
+<p>
+  ninja intellisense<br />
+  input:text.control
+</p>
+
+<hr />
 <u> binded class </u>
 
 <div *ngFor="let film of filmler">
@@ -78,7 +84,53 @@
 
 <hr />
 
-<p>
-  ninja intellisense<br />
-  input:text.control
-</p>
+<div *ngFor="let film of filmler">
+  <div>
+    <input
+      type="checkbox"
+      class="form-check-input"
+      [(ngModel)]="film.izlendiMi"
+      name=""
+      id=""
+    />
+    {{ film.ad }}
+    <span
+      [ngClass]="film.izlendiMi ? 'bg-warning' : 'bg-dark'"
+      class="badge bg-primary rounded-pill"
+      >{{ film.izlendiMi ? 'İzledim' : 'İzlemedim' }}</span
+    >
+  </div>
+  <hr />
+</div>
+
+<hr />
+
+<button class="btn btn-success" (click)="filter()">
+  Sadece İzlenmeyenleri Göster
+</button>
+
+<div *ngFor="let film of filmler">
+  <div>
+    <input
+      type="checkbox"
+      class="form-check-input"
+      [(ngModel)]="film.izlendiMi"
+      name=""
+      id=""
+    />
+    {{ film.ad }}
+    <span
+      [ngClass]="film.izlendiMi ? 'bg-warning' : 'bg-dark'"
+      class="badge bg-primary rounded-pill"
+      >{{ film.izlendiMi ? 'İzledim' : 'İzlemedim' }}</span
+    >
+  </div>
+  <hr />
+</div>
+
+<hr />
+
+<p><a href="https://getbootstrap.com/"> getbootstrap.com/</a></p>
+
+<br />
+<br />
