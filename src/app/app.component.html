@@ -1,4 +1,34 @@
+<!--
 <hello name="{{ name }}"></hello>
 <p>
   Start editing to see some magic happen :)
 </p>
+-->
+
+<p>inner html</p>
+<h1>{{ yazi }}</h1>
+<p>
+  nasılsın <b>{{ isim }} ?</b>
+</p>
+
+<hr />
+<p>
+  one way
+  <br />
+  1:<input type="checkbox" name="" id="" [checked]="isChecked" />
+  <br />
+  2:<input type="checkbox" name="" id="" [checked]="isCheckedFalse" />
+  <br /><br />
+  1: {{ isChecked }} 2: {{ isCheckedFalse }}
+</p>
+<hr />
+<p>
+  two way
+
+  <br />
+  3:<input type="checkbox" name="" id="" [(ngModel)]="isCheckedTwoWay" />
+  <br /><br />
+  3:{{ isCheckedTwoWay }}
+</p>
+
+<p></p>
