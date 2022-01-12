@@ -5,15 +5,16 @@
 </p>
 -->
 
-<p>inner html</p>
-<h1>{{ yazi }}</h1>
+<u>inner html</u>
+<br /><br />
+<b>{{ yazi }}</b>
 <p>
   nasılsın <b>{{ isim }} ?</b>
 </p>
 
 <hr />
 <p>
-  one way
+  <u>one way</u>
   <br />
   1:<input type="checkbox" name="" id="" [checked]="isChecked" />
   <br />
@@ -23,7 +24,7 @@
 </p>
 <hr />
 <p>
-  two way
+  <u>two way</u>
 
   <br />
   3:<input type="checkbox" name="" id="" [(ngModel)]="isCheckedTwoWay" />
@@ -39,6 +40,7 @@
 <p></p>
 
 <hr />
+<u>static combo</u>
 <p>
   <select>
     <option>AAA</option>
@@ -46,6 +48,8 @@
     <option>CCC</option>
   </select>
 </p>
+<hr />
+<u>binded combo</u>
 
 <p>
   <select>
@@ -53,4 +57,28 @@
       {{ sehir }}
     </option>
   </select>
+</p>
+
+<hr />
+<u> binded list </u>
+
+<ul *ngFor="let sehir of sehirler">
+  <li>{{ sehir }}</li>
+</ul>
+
+<hr />
+<u> binded class </u>
+
+<div *ngFor="let film of filmler">
+  <div>
+    <h3>{{ film.ad }}</h3>
+    <input type="checkbox" [(ngModel)]="film.izlendiMi" name="" id="" />
+  </div>
+</div>
+
+<hr />
+
+<p>
+  ninja intellisense<br />
+  input:text.control
 </p>

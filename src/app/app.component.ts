@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Film } from './models/film.model';
 
 @Component({
   selector: 'my-app',
@@ -14,4 +15,10 @@ export class AppComponent {
   isCheckedTwoWay: boolean = true;
 
   sehirler: string[] = ['Eskişehir', 'İzmir', 'Ankara', 'İstanbul'];
+
+  filmler: Film[] = [
+    new Film('Matrix 4', '', false),
+    new Film('Dont Look Up', '', true),
+    new Film('Yüzüklerin Efendisi', '', true),
+  ];
 }
