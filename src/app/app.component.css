@@ -1,3 +1,11 @@
 p {
   font-family: Lato;
 }
+
+.yesil {
+  background: green;
+}
+
+.kirmizi {
+  background: red;
+}

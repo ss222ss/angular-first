@@ -1,0 +1,19 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Title</title>
+    <base href="/" />
+  </head>
+  <body>
+    <p>non angular</p>
+
+    <app-root>
+      test change 11.54
+      <br />
+      11.58
+    </app-root>
+  </body>
+</html>
+!-->
