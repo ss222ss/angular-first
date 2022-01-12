@@ -12,4 +12,6 @@ export class AppComponent {
   isChecked: boolean = true;
   isCheckedFalse: boolean = false;
   isCheckedTwoWay: boolean = true;
+
+  sehirler: string[] = ['Eskişehir', 'İzmir', 'Ankara', 'İstanbul'];
 }

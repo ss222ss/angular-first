@@ -29,6 +29,28 @@
   3:<input type="checkbox" name="" id="" [(ngModel)]="isCheckedTwoWay" />
   <br /><br />
   3:{{ isCheckedTwoWay }}
+  <br />
+  colored
+  <br />
 </p>
 
+<p [ngClass]="isCheckedTwoWay ? 'yesil' : 'kirmizi'">3:{{ isCheckedTwoWay }}</p>
+
 <p></p>
+
+<hr />
+<p>
+  <select>
+    <option>AAA</option>
+    <option>BBB</option>
+    <option>CCC</option>
+  </select>
+</p>
+
+<p>
+  <select>
+    <option *ngFor="let sehir of sehirler">
+      {{ sehir }}
+    </option>
+  </select>
+</p>
